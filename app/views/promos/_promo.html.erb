@@ -1,0 +1,9 @@
+<tr>
+  <td><%= promo.name %></td>
+  <td><%= promo.description %></td>
+  <td><%= promo.id_marca %></td>
+  <td><%= promo.id_tienda %></td>
+  <td><%= link_to 'Show', promo %></td>
+  <td><%= link_to 'Edit', edit_promo_path(promo) %></td>
+  <td><%= link_to 'Destroy', promo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

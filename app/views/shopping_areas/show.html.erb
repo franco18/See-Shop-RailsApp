@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @shopping_area.name %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @shopping_area.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @shopping_area.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_shopping_area_path(@shopping_area) %> |
+<%= link_to 'Back', shopping_areas_path %>

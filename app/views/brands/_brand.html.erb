@@ -1,0 +1,23 @@
+<tr>
+  <td><%= brand.name %></td>
+  <td><%= brand.nit %></td>
+  <td><%= brand.phone %></td>
+  <td><%= brand.email %></td>
+  <td><%= brand.web_page %></td>
+  <td><%= brand.description %></td>
+  <td>
+    <%= link_to(brand, :class => 'btn btn-xs btn-primary', :title =>
+        "Ver") do %>
+            <span class= "glyphicon glyphicon-info-sign"></span>
+        <% end %>
+    <%= link_to(edit_brand_path(brand), :class =>
+        'btn btn-default btn-xs', :title => "Editar") do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+    <% end %>
+    <%= link_to(brand, method: :delete, data: { confirm:
+            '¿Está seguro?' }, :class => 'btn btn-xs btn-danger', :title =>
+            "Eliminar") do %>
+            <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+    </td>
+</tr>

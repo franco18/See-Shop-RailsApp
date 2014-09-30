@@ -1,0 +1,96 @@
+
+    <div class="col-sm-3 col-md-2 affix-sidebar" id="sideBar">
+    <div class="sidebar-nav">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <span class="visible-xs navbar-brand">See&Shop</span>
+    </div>
+    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+      <ul class="nav navbar-nav" id="sidenav01">
+        <li class="menu-head">
+          <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01">
+          <h4>
+          Admin
+          <br>
+          <small>administrator</small>
+          </h4>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-toggle="collapse" data-target="#toggle_shopping_area"
+            data-parent="#sidenav01" class="module tree-toggler"
+            id="module_shopping_area">
+            <span class="glyphicon glyphicon-chevron-right"></span> Zona Comercial
+            <span class="caret pull-right"></span>
+          </a>
+          <div class="collapse" id="toggle_shopping_area" style="height: 0px;">
+            <ul class="nav nav-list">
+              <li>
+                <%= link_to "  Nuevo", new_shopping_area_path,
+                  :class => "glyphicon glyphicon-plus sub-module"%>
+              </li>
+              <li>
+                <%= link_to "  Lista", shopping_areas_path,
+                  :class => "glyphicon glyphicon-th-list sub-module" %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" data-toggle="collapse" data-target="#toggleBrand"
+            data-parent="#sidenav01" class="tree-toggler module">
+            <span class="glyphicon glyphicon-chevron-right"></span> Marcas
+            <span class="caret pull-right"></span>
+          </a>
+          <div class="collapse" id="toggleBrand" style="height: 0px;">
+            <ul class="nav nav-list">
+              <li><%= link_to "  Nuevo", new_brand_path,
+                :class => "glyphicon glyphicon-plus sub-module" %></li>
+              <li><%= link_to "  Lista", brands_path,
+                :class => "glyphicon glyphicon-th-list sub-module" %></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" data-toggle="collapse" data-target="#toggleDemo1"
+            data-parent="#sidenav01" class="module tree-toggler">
+            <span class="glyphicon glyphicon-chevron-right"></span> Tiendas
+            <span class="caret pull-right"></span>
+          </a>
+          <div class="collapse" id="toggleDemo1" style="height: 0px;">
+            <ul class="nav nav-list">
+              <li><%= link_to "  Nuevo", new_store_path,
+                :class => "glyphicon glyphicon-plus sub-module" %></li>
+              <li><%= link_to "  Lista", stores_path,
+                :class => "glyphicon glyphicon-th-list sub-module" %></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" data-toggle="collapse" data-target="#toggleDemo2"
+            data-parent="#sidenav01" class="module tree-toggler">
+            <span class="glyphicon glyphicon-chevron-right"></span> Promos
+            <span class="caret pull-right"></span>
+          </a>
+          <div class="collapse" id="toggleDemo2" style="height: 0px;">
+            <ul class="nav nav-list">
+              <li><%= link_to "  Nuevo", new_promo_path,
+                :class => "glyphicon glyphicon-plus sub-module" %></li>
+              <li><%= link_to "  Lista", promos_path,
+                :class => "glyphicon glyphicon-th-list sub-module" %></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="" class="module"><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li>
+      </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  </div>
+

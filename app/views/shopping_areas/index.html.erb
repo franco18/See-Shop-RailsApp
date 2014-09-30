@@ -1,0 +1,22 @@
+<%= form_tag shopping_areas_path, :method => 'get', :id => "shopping_areas_search" do %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <span class="glyphicon glyphicon-th-list"></span> Lista Zonas Comerciales</h3>
+    </div>
+    <div class="panel-body">
+      <div class="input-group">
+        <span class="input-group-addon" style="margin-right: -4px;">
+          <span class="glyphicon glyphicon-search"></span>
+        </span>
+        <%= text_field_tag :search, params[:search], :class => 'form-control',
+          :style => "width: 100%;", :placeholder => 'Filtrar tiendas' %>
+      </div>
+    </div>
+    <div id="shopping_areas"> <%= render :partial => 'shopping_areas_table' %></div>
+    <div class="panel-footer">
+      <%= link_to 'Nueva Zona Comercial', new_shopping_area_path,
+        :class => 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="col-md-6", style  >
+  <%= f.input :name, label: "Nombre" %>
+  <%= f.input :description, label: "Descripción" %>
+  <%= f.input :city, label: "Ciudad" %>
+  <%= f.input :address, label: "Dirreción" %>
+  <%= f.input :latitude, as: :hidden %>
+  <%= f.input :longitude, as: :hidden %>
+</div>
+<div class="col-md-6">
+  <strong>Ubicación</strong>
+  <div id="map-container">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </div>
+</div>
+

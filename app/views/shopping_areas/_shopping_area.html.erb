@@ -1,0 +1,21 @@
+  <tr>
+    <td><%= shopping_area.name %></td>
+    <td><%= shopping_area.description %></td>
+    <td><%= shopping_area.city %></td>
+    <td><%= shopping_area.address %></td>
+    <td>
+    <%= link_to(shopping_area, :class => 'btn btn-xs btn-primary', :title =>
+        "Ver") do %>
+            <span class= "glyphicon glyphicon-info-sign"></span>
+        <% end %>
+    <%= link_to(edit_shopping_area_path(shopping_area), :class =>
+        'btn btn-default btn-xs', :title => "Editar") do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+    <% end %>
+    <%= link_to(shopping_area, method: :delete, data: { confirm:
+            '¿Está seguro?' }, :class => 'btn btn-xs btn-danger', :title =>
+            "Eliminar") do %>
+            <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+    </td>
+  </tr>

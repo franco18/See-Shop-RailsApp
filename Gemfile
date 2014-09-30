@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 #To annotate database models
 gem 'annotate'
 #To use bootstrap
@@ -29,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'simple_form'
 
 gem 'devise'
+#To attach files
+gem "paperclip", "~> 4.2"
 
 
 # To use ActiveModel has_secure_password

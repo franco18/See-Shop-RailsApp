@@ -23,7 +23,7 @@ class Promo < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('upper(name) LIKE upper(?)', "%#{search}%")
+      where('name LIKE (?) or restriction LIKE (?)', "%#{search}%", "%#{search}%")
     else
       where("1=1")
     end

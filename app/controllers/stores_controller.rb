@@ -1,14 +1,10 @@
 class StoresController < ApplicationController
-
+  respond_to :json, :html, :js
   # GET /stores
   # GET /stores.json
   def index
-    @stores = Store.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @stores }
-    end
+    @stores = Store.search(params[:search])
+    respond_with(@stores)
   end
 
   # GET /stores/1
@@ -27,6 +23,7 @@ class StoresController < ApplicationController
   def new
     @store = Store.new
     @brands = Brand.order(:name).map{ |p| [p.name,p.id]}
+    @shopping_areas = ShoppingArea.order(:name).map{ |p| [p.name,p.id]}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @store }

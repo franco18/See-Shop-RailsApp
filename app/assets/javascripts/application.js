@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery
+//= require jquery.ui.all
 //= require bootstrap-sprockets
 //= require bootstrap-select.js
 
 $(document).ready(function() {
+  $(".datepicker").datepicker({dateFormat: "dd/mm/yy"});
   $('.selectpicker').selectpicker();
 });

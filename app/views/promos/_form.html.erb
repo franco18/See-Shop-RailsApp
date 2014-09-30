@@ -1,6 +1,16 @@
-<%= f.input :name, input_html: {size: 40} %>
-<%= f.input :description, input_html: {cols: 39, rows: 5, style: "resize: none"} %>
-<%= f.input :start_date, input_html: {size: 40} %>
-<%= f.input :end_date, input_html: {size: 40} %>
-<%= f.input :restriction, input_html: {size: 40} %>
+<div class="col-md-12">
+  <%= f.input :name%>
+  <%= f.input :id_brand, label: "Marca", collection: @brands, input_html:
+  {:class => "selectpicker", title: "Seleccionar..."} %>
+  <%= f.input :description, input_html: {rows: 5, style: "resize: none"} %>
+</div>
+<div class="col-md-6">
+<%= f.input :start_date, as: :string, input_html: {:class => "datepicker"} %>
+</div>
+<div class="col-md-6">
+<%= f.input :end_date, as: :string, input_html: {:class => "datepicker"}%>
+</div>
+<div class="col-md-12">
+<%= f.input :restriction %>
+</div>
 

@@ -1,14 +1,10 @@
 class BrandsController < ApplicationController
-
+  respond_to :json, :html, :js
   # GET /brands
   # GET /brands.json
   def index
-    @brands = Brand.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @brands }
-    end
+    @brands = Brand.search(params[:search])
+    respond_with(@brands)
   end
 
   # GET /brands/1

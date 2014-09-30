@@ -1,9 +1,10 @@
 <div class="col-md-6">
-  <%= f.input :name, label: "Nombre", input_html: {size: 40} %>
-  <%= f.input :nit, input_html: {size: 40} %>
-  <%= f.input :phone, input_html: {size: 40} %>
-  <%= f.input :email, input_html: {size: 40} %>
-  <%= f.input :web_page, input_html: {size: 40} %>
+  <%= f.input :name, label: "Nombre" %>
+  <%= f.input :nit %>
+  <%= f.input :phone %>
+  <%= f.input :email %>
+  <%= f.input :web_page %>
+  <%= f.file_field :avatar %>
 </div>
 <div class="col-md-6">
   <%= f.input :description, label: "Descripción", input_html: {cols: 39, rows: 11,

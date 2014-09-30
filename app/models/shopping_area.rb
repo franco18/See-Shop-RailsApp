@@ -15,4 +15,13 @@
 
 class ShoppingArea < ActiveRecord::Base
   attr_accessible :latitude, :longitude, :name, :description, :city, :address
+
+  def self.search(search)
+    if search
+      where('name LIKE upper(?) or description LIKE (?) or city LIKE (?) or address
+        LIKE (?)', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    else
+      where("1=1")
+    end
+  end
 end

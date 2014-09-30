@@ -1,14 +1,10 @@
 class PromosController < ApplicationController
-
+  respond_to :json, :html, :js
   # GET /promos
   # GET /promos.json
   def index
-    @promos = Promo.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @promos }
-    end
+    @promos = Promo.search(params[:search])
+    respond_with(@promos)
   end
 
   # GET /promos/1
@@ -26,7 +22,7 @@ class PromosController < ApplicationController
   # GET /promos/new.json
   def new
     @promo = Promo.new
-
+    @brands = Brand.order(:name).map{ |p| [p.name,p.id]}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @promo }

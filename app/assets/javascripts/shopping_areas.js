@@ -1,30 +1,59 @@
-$(document).ready(function() {
-  initialize();
-  $(".collapse").collapse();
-  $("#shopping_area_longitude").val("");
-  $("#shopping_area_latitude").val("");
-});
-
 var map;
 var markers = [];
+$(document).ready(function() {
+  live_search();
+  if ($("form.simple_form").length) {
+    if (has_location()){
+      var my_location = new google.maps.LatLng(parseFloat($("#shopping_area_latitude").val()),parseFloat($("#shopping_area_longitude").val()));
+      initialize_map(my_location, 15, true);
+      addMarker(my_location);
+    } else {
+      var medellin = new google.maps.LatLng(6.21969155390631, -75.5735492671374)
+      initialize_map(medellin, 12, true);
+    }
+  }
+  if ($("#show_shopping_area").length){
+    var my_location = new google.maps.LatLng(parseFloat($("#lat").html()),parseFloat($("#lng").html()));
+    initialize_map(my_location,15, false);
+    addMarker(my_location);
+  }
+  $("#toggle_shopping_area").collapse();
+});
 
-function initialize() {
-  var medellin = new google.maps.LatLng(6.21969155390631, -75.5735492671374)
+function live_search(){
+  $('#shopping_areas_search input').keyup(function(e){
+    e.preventDefault();
+    $(this).addClass("loadingInput");
+    $.get($('#shopping_areas_search').attr('action'), $('#shopping_areas_search').serialize(), null, 'script')
+    .complete(function(data){ $('#shopping_areas_search input').removeClass("loadingInput"); })
+  });
+}
+
+function initialize_map(location, zoom, click_event) {
   var mapOptions = {
-    center: medellin,
-    zoom: 12,
+    center: location,
+    zoom: zoom,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById("map_canvas"),
       mapOptions);
 
   // This event listener will call addMarker() when the map is clicked.
-  google.maps.event.addListener(map, 'click', function(event) {
-    addMarker(event.latLng);
-    setValueLatLng(event.latLng);
-  });
+  if (click_event){
+    google.maps.event.addListener(map, 'click', function(event) {
+      addMarker(event.latLng);
+      setValueLatLng(event.latLng);
+    });
+  }
 }
 
+function has_location(){
+  if ($("#shopping_area_longitude").val()!= "" &&
+      $("#shopping_area_latitude").val() != ""){
+    return true;
+  }
+  return false;
+}
 function setValueLatLng(location){
   $("#shopping_area_longitude").val(location.lng());
   $("#shopping_area_latitude").val(location.lat());

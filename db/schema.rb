@@ -11,17 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140929125232) do
+ActiveRecord::Schema.define(:version => 20140930224843) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "email"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.string   "web_page"
     t.string   "nit"
     t.string   "phone"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "promos", :force => true do |t|
@@ -58,11 +62,12 @@ ActiveRecord::Schema.define(:version => 20140929125232) do
   create_table "stores", :force => true do |t|
     t.string   "name"
     t.integer  "id_brand"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "phone"
     t.string   "email"
     t.string   "address"
+    t.integer  "id_shopping_area"
   end
 
 end

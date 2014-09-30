@@ -1,22 +1,15 @@
+<% provide(:store, 'active') %>
 <%= form_tag stores_path, :method => 'get', :id => "stores_search" do %>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        <span class="glyphicon glyphicon-th-list"></span> Lista Tiendas</h3>
-    </div>
-    <div class="panel-body">
-      <div class="input-group">
-        <span class="input-group-addon" style="margin-right: -4px;">
-          <span class="glyphicon glyphicon-search"></span>
-        </span>
-        <%= text_field_tag :search, params[:search], :class => 'form-control',
-          :style => "width: 100%;", :placeholder => 'Filtrar tiendas' %>
-      </div>
-    </div>
-    <div id="stores"> <%= render :partial => 'stores_table' %></div>
-    <div class="panel-footer">
-      <%= link_to 'Nueva Tienda', new_store_path,
-        :class => 'btn btn-primary' %>
+  <div style="margin-left: 5px; margin-bottom: 15px;">
+    <div class="input-group">
+      <span class="input-group-addon" style="margin-right: -4px;">
+        <span class="glyphicon glyphicon-search"></span>
+      </span>
+      <%= text_field_tag :search, params[:search], :class => 'form-control',
+        :style => "width: 300px;", :placeholder => 'Buscar...' %>
     </div>
   </div>
+  <div id="stores"> <%= render :partial => 'stores_table' %></div>
 <% end %>
+
+

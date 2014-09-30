@@ -1,13 +1,10 @@
 class ShoppingAreasController < ApplicationController
+  respond_to :json, :html, :js
   # GET /shopping_areas
   # GET /shopping_areas.json
   def index
-    @shopping_areas = ShoppingArea.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @shopping_areas }
-    end
+    @shopping_areas = ShoppingArea.search(params[:search])
+    respond_with(@shopping_areas)
   end
 
   # GET /shopping_areas/1

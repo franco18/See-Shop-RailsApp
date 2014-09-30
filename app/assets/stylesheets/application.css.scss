@@ -10,7 +10,13 @@
  *
  *= require_self
  *= require bootstrap-select.css
+ *= require jquery.ui.all
  */
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+  vertical-align: middle !important;
+}
+
 .menu-head{
   background-color: #428bca;
 }
@@ -66,7 +72,7 @@
 
   }
   .module:hover{
-    background-color: #697279 !important;
+    background-color: #20303C !important;
   }
 
   .affix-row, .affix-container, .affix-content{

@@ -1,20 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @shopping_area.name %>
-</p>
-
-<p>
-  <b>Latitude:</b>
-  <%= @shopping_area.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @shopping_area.longitude %>
-</p>
-
-
-<%= link_to 'Edit', edit_shopping_area_path(@shopping_area) %> |
-<%= link_to 'Back', shopping_areas_path %>
+<script type="text/javascript"
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBaw23rPcOwVcr0bWZlAzsuOnFWZsTyxhU&sensor=true">
+</script>
+<div class="col-md-12" id="show_shopping_area">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Zona Comercial</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-6">
+          <div id="map-container">
+            <div id="map_canvas" style="width:100%; height:100%"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-user-information">
+            <tbody>
+              <tr>
+                <td><strong>Nombre</strong></td>
+                <td><%= @shopping_area.name.blank? ? "-" : @shopping_area.name %></td>
+              </tr>
+              <tr>
+                <td><strong>Ciudad</strong></td>
+                <td><%= @shopping_area.city.blank? ? "-" : @shopping_area.city %></td>
+              </tr>
+              <tr>
+                <td><strong>Dirección</strong></td>
+                <td><%= @shopping_area.address.blank? ? "-" : @shopping_area.address %></td>
+              </tr>
+               <tr>
+                <td><strong>Descripción</strong></td>
+                <td><%= @shopping_area.description.blank? ? "-" : @shopping_area.description %></td>
+              </tr>
+              <div id="lat" style="display: none"><%=@shopping_area.latitude%></div>
+              <div id="lng" style="display: none"><%=@shopping_area.longitude%></div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Editar", edit_shopping_area_path(@shopping_area),
+          :class => 'btn btn-primary' %>
+      </div>
+    </div>
+</div>

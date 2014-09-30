@@ -24,8 +24,7 @@
         </li>
         <li>
           <a href="#" data-toggle="collapse" data-target="#toggle_shopping_area"
-            data-parent="#sidenav01" class="module tree-toggler"
-            id="module_shopping_area">
+            data-parent="#sidenav01" class="module tree-toggler">
             <span class="glyphicon glyphicon-chevron-right"></span> Zona Comercial
             <span class="caret pull-right"></span>
           </a>
@@ -43,12 +42,12 @@
           </div>
         </li>
         <li>
-          <a href="#" data-toggle="collapse" data-target="#toggleBrand"
+          <a href="#" data-toggle="collapse" data-target="#toggle_brand"
             data-parent="#sidenav01" class="tree-toggler module">
             <span class="glyphicon glyphicon-chevron-right"></span> Marcas
             <span class="caret pull-right"></span>
           </a>
-          <div class="collapse" id="toggleBrand" style="height: 0px;">
+          <div class="collapse" id="toggle_brand" style="height: 0px;">
             <ul class="nav nav-list">
               <li><%= link_to "  Nuevo", new_brand_path,
                 :class => "glyphicon glyphicon-plus sub-module" %></li>
@@ -58,12 +57,12 @@
           </div>
         </li>
         <li>
-          <a href="#" data-toggle="collapse" data-target="#toggleDemo1"
+          <a href="#" data-toggle="collapse" data-target="#toggle_store"
             data-parent="#sidenav01" class="module tree-toggler">
             <span class="glyphicon glyphicon-chevron-right"></span> Tiendas
             <span class="caret pull-right"></span>
           </a>
-          <div class="collapse" id="toggleDemo1" style="height: 0px;">
+          <div class="collapse" id="toggle_store" style="height: 0px;">
             <ul class="nav nav-list">
               <li><%= link_to "  Nuevo", new_store_path,
                 :class => "glyphicon glyphicon-plus sub-module" %></li>
@@ -73,12 +72,12 @@
           </div>
         </li>
         <li>
-          <a href="#" data-toggle="collapse" data-target="#toggleDemo2"
+          <a href="#" data-toggle="collapse" data-target="#toggle_promo"
             data-parent="#sidenav01" class="module tree-toggler">
             <span class="glyphicon glyphicon-chevron-right"></span> Promos
             <span class="caret pull-right"></span>
           </a>
-          <div class="collapse" id="toggleDemo2" style="height: 0px;">
+          <div class="collapse" id="toggle_promo" style="height: 0px;">
             <ul class="nav nav-list">
               <li><%= link_to "  Nuevo", new_promo_path,
                 :class => "glyphicon glyphicon-plus sub-module" %></li>

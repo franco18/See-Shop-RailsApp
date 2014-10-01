@@ -11,7 +11,7 @@ class BrandsController < ApplicationController
   # GET /brands/1.json
   def show
     @brand = Brand.find(params[:id])
-
+    @brand["image_url"] = @brand.avatar.url
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @brand }

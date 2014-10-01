@@ -1,20 +1,43 @@
-<p id="notice"><%= notice %></p>
-<%= image_tag @brand.avatar.url %>
-<p>
-  <b>Name:</b>
-  <%= @brand.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @brand.description %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @brand.email %>
-</p>
-
-
-<%= link_to 'Edit', edit_brand_path(@brand) %> |
-<%= link_to 'Back', brands_path %>
+<div class="col-md-12" id="show_brand">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Marca</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-6">
+          <%= image_tag @brand.avatar.url,
+            :class=>"img-responsive img-rounded", size: "350x350" %>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-user-information">
+            <tbody>
+              <tr>
+                <td><strong>Nombre</strong></td>
+                <td><%= @brand.name.blank? ? "-" : @brand.name %></td>
+              </tr>
+              <tr>
+                <td><strong>NIT</strong></td>
+                <td><%= @brand.nit.blank? ? "-" : @brand.nit %></td>
+              </tr>
+              <tr>
+                <td><strong>Telefono</strong></td>
+                <td><%= @brand.phone.blank? ? "-" : @brand.phone %></td>
+              </tr>
+              <tr>
+                <td><strong>Email</strong></td>
+                <td><%= @brand.email.blank? ? "-" : @brand.email %></td>
+              </tr>
+              <tr>
+                <td><strong>Pagina Web</strong></td>
+                <td><%= @brand.web_page.blank? ? "-" : @brand.web_page %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Editar", edit_brand_path(@brand),
+          :class => 'btn btn-primary' %>
+      </div>
+    </div>
+</div>

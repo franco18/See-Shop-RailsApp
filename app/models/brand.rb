@@ -18,9 +18,10 @@
 #
 
 class Brand < ActiveRecord::Base
+  attr_accessor :avatar_url
   attr_accessible :description, :email, :name, :web_page, :nit, :phone, :avatar
   has_many :stores
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :avatar, url: "/assets/images/brands/:id/:basename.:extension"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def self.search(search)

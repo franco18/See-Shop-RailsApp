@@ -4,18 +4,22 @@
 #
 #  id               :integer          not null, primary key
 #  name             :string(255)
-#  id_brand         :integer
+#  brand_id         :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  phone            :string(255)
 #  email            :string(255)
 #  address          :string(255)
-#  id_shopping_area :integer
+#  shopping_area_id :integer
+#  longitude        :float
+#  latitude         :float
 #
 
 class Store < ActiveRecord::Base
-  attr_accessible :id_brand, :name, :phone, :email, :address, :id_shopping_area
+  attr_accessible :brand_id, :name, :phone, :email, :address, :shopping_area_id,
+    :longitude, :latitude
   belongs_to :brand
+  belongs_to :shopping_area
   has_many :promos
   has_many :store_promos
   has_many :promos, through: :store_promos

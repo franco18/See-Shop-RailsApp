@@ -1,10 +1,10 @@
 <tr>
-  <td><%= brand.name %></td>
-  <td><%= brand.nit %></td>
-  <td><%= brand.phone %></td>
-  <td><%= brand.email %></td>
-  <td><%= brand.web_page %></td>
-  <td><%= brand.description %></td>
+  <td><%= brand.name.blank? ? "-" : brand.name %></td>
+  <td><%= brand.nit.blank? ? "-" : brand.nit %></td>
+  <td><%= brand.phone.blank? ? "-" : brand.phone %></td>
+  <td><%= brand.email.blank? ? "-" : brand.email %></td>
+  <td><%= brand.web_page.blank? ? "-" : brand.web_page %></td>
+  <td><%= brand.description.blank? ? "-" : brand.description %></td>
   <td>
     <%= link_to(brand, :class => 'btn btn-xs btn-primary', :title =>
         "Ver") do %>

@@ -1,8 +1,8 @@
   <tr>
-    <td><%= shopping_area.name %></td>
-    <td><%= shopping_area.description %></td>
-    <td><%= shopping_area.city %></td>
-    <td><%= shopping_area.address %></td>
+    <td><%= shopping_area.name.blank? ? "-" : shopping_area.name %></td>
+    <td><%= shopping_area.description.blank? ? "-" : shopping_area.description %></td>
+    <td><%= shopping_area.city.blank? ? "-" : shopping_area.city %></td>
+    <td><%= shopping_area.address.blank? ? "-" : shopping_area.address %></td>
     <td>
     <%= link_to(shopping_area, :class => 'btn btn-xs btn-primary', :title =>
         "Ver") do %>

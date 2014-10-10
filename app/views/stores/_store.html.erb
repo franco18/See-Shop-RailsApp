@@ -1,7 +1,22 @@
 <tr>
-  <td><%= store.name %></td>
-  <td><%= store.id_marca %></td>
-  <td><%= link_to 'Show', store %></td>
-  <td><%= link_to 'Edit', edit_store_path(store) %></td>
-  <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= store.name.blank? ? "-" : store.name %></td>
+  <td><%= store.brand.blank? ? "-" : store.brand.name %></td>
+  <td><%= store.shopping_area.blank? ? "-" : store.shopping_area.name %></td>
+  <td><%= store.phone.blank? ? "-" : store.phone %></td>
+  <td><%= store.email.blank? ? "-" : store.email %></td>
+  <td>
+    <%= link_to(store, :class => 'btn btn-xs btn-primary', :title =>
+        "Ver") do %>
+            <span class= "glyphicon glyphicon-info-sign"></span>
+        <% end %>
+    <%= link_to(edit_store_path(store), :class =>
+        'btn btn-default btn-xs', :title => "Editar") do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+    <% end %>
+    <%= link_to(store, method: :delete, data: { confirm:
+            '¿Está seguro?' }, :class => 'btn btn-xs btn-danger', :title =>
+            "Eliminar") do %>
+            <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+    </td>
 </tr>

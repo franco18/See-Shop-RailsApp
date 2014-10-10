@@ -15,14 +15,18 @@
 #  avatar_content_type :string(255)
 #  avatar_file_size    :integer
 #  avatar_updated_at   :datetime
+#  image_url           :string(255)
 #
 
 class Brand < ActiveRecord::Base
-  attr_accessor :avatar_url
   attr_accessible :description, :email, :name, :web_page, :nit, :phone, :avatar
   has_many :stores
-  has_attached_file :avatar, url: "/assets/images/brands/:id/:basename.:extension"
+  has_many :promos
+  has_attached_file :avatar, url: "/assets/images/brands/:id/:basename.:extension",
+    :default_url => "no_picture.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+  validates :avatar, :attachment_presence => true
 
   def self.search(search)
     if search

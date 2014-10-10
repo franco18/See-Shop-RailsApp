@@ -1,5 +1,11 @@
 class ShoppingAreasController < ApplicationController
   respond_to :json, :html, :js
+
+  def promos_by_location
+    user_location = [params[:latitude],params[:longitude]]
+    ShoppingArea.shopping_areas_in_range(user_location)
+  end
+
   # GET /shopping_areas
   # GET /shopping_areas.json
   def index
@@ -38,7 +44,6 @@ class ShoppingAreasController < ApplicationController
   # POST /shopping_areas.json
   def create
     @shopping_area = ShoppingArea.new(params[:shopping_area])
-
     respond_to do |format|
       if @shopping_area.save
         format.html { redirect_to @shopping_area, notice: 'Shopping area was successfully created.' }

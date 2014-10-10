@@ -1,25 +1,47 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @promo.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @promo.description %>
-</p>
-
-<p>
-  <b>Id marca:</b>
-  <%= @promo.id_marca %>
-</p>
-
-<p>
-  <b>Id tienda:</b>
-  <%= @promo.id_tienda %>
-</p>
-
-
-<%= link_to 'Edit', edit_promo_path(@promo) %> |
-<%= link_to 'Back', promos_path %>
+<div class="col-md-12" id="show_promo">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Promoción</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-6">
+          <%= image_tag @promo.image.url,
+            :class=>"img-responsive img-rounded", size: "350x350" %>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-user-information">
+            <tbody>
+              <tr>
+                <td><strong>Nombre</strong></td>
+                <td><%= @promo.name.blank? ? "-" : @promo.name %></td>
+              </tr>
+              <tr>
+                <td><strong>Marca</strong></td>
+                <td><%= @promo.brand.blank? ? "-" : @promo.brand.name %></td>
+              </tr>
+              <tr>
+                <td><strong>Descripción</strong></td>
+                <td><%= @promo.description.blank? ? "-" : @promo.description %></td>
+              </tr>
+              <tr>
+                <td><strong>Restricciones</strong></td>
+                <td><%= @promo.restriction.blank? ? "-" : @promo.restriction %></td>
+              </tr>
+              <tr>
+                <td><strong>Fecha Inicio</strong></td>
+                <td><%= @promo.start_date.blank? ? "-" : @promo.start_date %></td>
+              </tr>
+              <tr>
+                <td><strong>Fecha Fin</strong></td>
+                <td><%= @promo.end_date.blank? ? "-" : @promo.end_date %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Editar", edit_promo_path(@promo),
+          :class => 'btn btn-primary', disabled: true %>
+      </div>
+    </div>
+</div>

@@ -4,6 +4,9 @@ class BrandsController < ApplicationController
   # GET /brands.json
   def index
     @brands = Brand.search(params[:search])
+    @brands.each do |brand|
+      brand["image_encode"] = Base64.encode64(File.open(brand.avatar.path).read)
+    end
     respond_with(@brands)
   end
 
@@ -11,7 +14,7 @@ class BrandsController < ApplicationController
   # GET /brands/1.json
   def show
     @brand = Brand.find(params[:id])
-    @brand["image_url"] = @brand.avatar.url
+    @brand["image_encode"] = Base64.encode64(File.open(@brand.avatar.path).read)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @brand }
@@ -39,7 +42,7 @@ class BrandsController < ApplicationController
   # POST /brands.json
   def create
     @brand = Brand.new(params[:brand])
-
+    @brand.image_url = @brand.avatar.url
     respond_to do |format|
       if @brand.save
         format.html { redirect_to @brand, notice: 'Brand was successfully created.' }
@@ -55,7 +58,7 @@ class BrandsController < ApplicationController
   # PUT /brands/1.json
   def update
     @brand = Brand.find(params[:id])
-
+    @brand.image_url = @brand.avatar.url
     respond_to do |format|
       if @brand.update_attributes(params[:brand])
         format.html { redirect_to @brand, notice: 'Brand was successfully updated.' }

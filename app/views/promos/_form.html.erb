@@ -1,16 +1,27 @@
-<div class="col-md-12">
-  <%= f.input :name%>
-  <%= f.input :id_brand, label: "Marca", collection: @brands, input_html:
-  {:class => "selectpicker", title: "Seleccionar..."} %>
-  <%= f.input :description, input_html: {rows: 5, style: "resize: none"} %>
+<div class="col-md-6">
+  <div class="col-md-12">
+    <%= f.input :name, label: "Nombre" %>
+    <%= f.input :brand_id, label: "Marca", input_html: {:class => "selectpicker",
+      title: "Seleccionar..."}, collection: Brand.order(:name).map{ |p| [p.name,p.id]} %>
+  </div>
+  <div class="col-md-6">
+    <%= f.input :start_date, as: :string, input_html: {:class => "datepicker"},
+      label: "Fecha Inicio" %>
+  </div>
+  <div class="col-md-6">
+    <%= f.input :end_date, as: :string, input_html: {:class => "datepicker"},
+      label: "Fecha Fin"%>
+  </div>
+  <div class="col-md-12">
+    <%= f.file_field :image %>
+  </div>
 </div>
 <div class="col-md-6">
-<%= f.input :start_date, as: :string, input_html: {:class => "datepicker"} %>
-</div>
-<div class="col-md-6">
-<%= f.input :end_date, as: :string, input_html: {:class => "datepicker"}%>
-</div>
-<div class="col-md-12">
-<%= f.input :restriction %>
+  <div class="col-md-12">
+    <%= f.input :description, input_html: {rows: 5, style: "resize: none"},
+    label: "Descripción" %>
+    <%= f.input :restriction, label: "Restricciones", as: :text, input_html:
+      {rows: 5, style: "resize: none"} %>
+  </div>
 </div>
 

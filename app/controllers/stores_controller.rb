@@ -22,8 +22,6 @@ class StoresController < ApplicationController
   # GET /stores/new.json
   def new
     @store = Store.new
-    @brands = Brand.order(:name).map{ |p| [p.name,p.id]}
-    @shopping_areas = ShoppingArea.order(:name).map{ |p| [p.name,p.id]}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @store }
@@ -39,7 +37,8 @@ class StoresController < ApplicationController
   # POST /stores.json
   def create
     @store = Store.new(params[:store])
-
+    @store.latitude = @store.shopping_area.latitude
+    @store.longitude = @store.shopping_area.longitude
     respond_to do |format|
       if @store.save
         format.html { redirect_to @store, notice: 'Store was successfully created.' }
@@ -55,7 +54,8 @@ class StoresController < ApplicationController
   # PUT /stores/1.json
   def update
     @store = Store.find(params[:id])
-
+    @store.latitude = @store.shopping_area.latitude
+    @store.longitude = @store.shopping_area.longitude
     respond_to do |format|
       if @store.update_attributes(params[:store])
         format.html { redirect_to @store, notice: 'Store was successfully updated.' }

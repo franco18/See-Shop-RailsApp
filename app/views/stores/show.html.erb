@@ -1,15 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @store.name %>
-</p>
-
-<p>
-  <b>Id marca:</b>
-  <%= @store.id_brand %>
-</p>
-
-
-<%= link_to 'Edit', edit_store_path(@store) %> |
-<%= link_to 'Back', stores_path %>
+<div class="col-md-6 col-md-offset-3" id="show_brand">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Tienda</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-user-information">
+          <tbody>
+            <tr>
+              <td><strong>Nombre</strong></td>
+              <td><%= @store.name.blank? ? "-" : @store.name %></td>
+            </tr>
+            <tr>
+              <td><strong>Marca</strong></td>
+              <td><%= @store.brand.blank? ? "-" : @store.brand.name %></td>
+            </tr>
+            <tr>
+              <td><strong>Zona Comercial</strong></td>
+              <td><%= @store.shopping_area.blank? ? "-" : @store.shopping_area.name %></td>
+            </tr>
+            <tr>
+              <td><strong>Teléfono</strong></td>
+              <td><%= @store.phone.blank? ? "-" : @store.phone %></td>
+            </tr>
+            <tr>
+              <td><strong>Email</strong></td>
+              <td><%= @store.email.blank? ? "-" : @store.email %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Editar", edit_store_path(@store),
+          :class => 'btn btn-primary' %>
+      </div>
+    </div>
+</div>

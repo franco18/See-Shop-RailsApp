@@ -1,9 +1,10 @@
 <div class="col-md-12">
   <%= f.input :name, label: "Nombre" %>
-  <%= f.input :id_brand, label: "Zona Comercial", collection: @shopping_areas, input_html:
-    {:class => "selectpicker", title: "Seleccionar..."} %>
-  <%= f.input :id_brand, label: "Marca", collection: @brands, input_html:
-    {:class => "selectpicker", title: "Seleccionar..."} %>
+  <%= f.input :shopping_area_id, label: "Zona Comercial", collection:
+    ShoppingArea.order(:name).map{ |p| [p.name,p.id]},
+    input_html: {:class => "selectpicker", title: "Seleccionar..."} %>
+  <%= f.input :brand_id, label: "Marca", input_html: {:class => "selectpicker",
+    title: "Seleccionar..."}, collection: Brand.order(:name).map{ |p| [p.name,p.id]} %>
   <%= f.input :phone, label: "Telefono" %>
   <%= f.input :email, label: "Email" %>
   <%= f.input :address, label: "Direccion" %>

@@ -4,13 +4,15 @@
 #
 #  id               :integer          not null, primary key
 #  name             :string(255)
-#  id_brand         :integer
+#  brand_id         :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  phone            :string(255)
 #  email            :string(255)
 #  address          :string(255)
-#  id_shopping_area :integer
+#  shopping_area_id :integer
+#  longitude        :float
+#  latitude         :float
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

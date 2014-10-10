@@ -1,9 +1,13 @@
-class PromosController < ApplicationController
+ class PromosController < ApplicationController
   respond_to :json, :html, :js
   # GET /promos
   # GET /promos.json
   def index
     @promos = Promo.search(params[:search])
+    @promos.each do |promo|
+      promo["brand_name"] = promo.brand.name
+      promo["image_encode"] = Base64.encode64(File.open(promo.image.path).read)
+    end
     respond_with(@promos)
   end
 
@@ -11,7 +15,7 @@ class PromosController < ApplicationController
   # GET /promos/1.json
   def show
     @promo = Promo.find(params[:id])
-
+    @promo["image_encode"] = Base64.encode64(File.open(@promo.image.path).read)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @promo }
@@ -22,10 +26,17 @@ class PromosController < ApplicationController
   # GET /promos/new.json
   def new
     @promo = Promo.new
-    @brands = Brand.order(:name).map{ |p| [p.name,p.id]}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @promo }
+    end
+  end
+
+  def assign_stores(id)
+    promo = Promo.find(id)
+    brand = promo.brand
+    brand.stores.each do |store|
+      promo.stores << store
     end
   end
 
@@ -38,9 +49,11 @@ class PromosController < ApplicationController
   # POST /promos.json
   def create
     @promo = Promo.new(params[:promo])
-
+    @promo.image_url = @promo.image.url
+    brand = @promo.brand
     respond_to do |format|
       if @promo.save
+        assign_stores(@promo.id)
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render json: @promo, status: :created, location: @promo }
       else
@@ -54,9 +67,10 @@ class PromosController < ApplicationController
   # PUT /promos/1.json
   def update
     @promo = Promo.find(params[:id])
-
+    @promo.image_url = @promo.image.url
     respond_to do |format|
       if @promo.update_attributes(params[:promo])
+        assign_stores(@promo.id)
         format.html { redirect_to @promo, notice: 'Promo was successfully updated.' }
         format.json { head :no_content }
       else
@@ -76,5 +90,10 @@ class PromosController < ApplicationController
       format.html { redirect_to promos_url }
       format.json { head :no_content }
     end
+  end
+
+  def user_location
+    #Esto hay que borrarlo!!!!!!!!!!!!!!
+    Location.create!(:location => params[:latitude])
   end
 end

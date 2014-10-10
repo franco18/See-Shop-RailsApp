@@ -32,13 +32,15 @@ class ShoppingArea < ActiveRecord::Base
     end
     #Shopping areas in the range
     promos = promos_in_range(shopping_areas_selected)
-
+    return promos
   end
 
   def self.promos_in_range(shopping_areas)
+    promos = [] unless promos
     shopping_areas.each do |sa|
-      stores_with_promos(sa)
+      promos = stores_with_promos(sa)
     end
+    promos
   end
 
   def self.stores_with_promos (shopping_area)
@@ -54,6 +56,7 @@ class ShoppingArea < ActiveRecord::Base
         promos << promo
       end
     end
+    promos
   end
 
   def self.distance_between a, b

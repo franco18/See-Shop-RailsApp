@@ -32,14 +32,6 @@
     end
   end
 
-  def assign_stores(id)
-    promo = Promo.find(id)
-    brand = promo.brand
-    brand.stores.each do |store|
-      promo.stores << store
-    end
-  end
-
   # GET /promos/1/edit
   def edit
     @promo = Promo.find(params[:id])
@@ -51,9 +43,9 @@
     @promo = Promo.new(params[:promo])
     @promo.image_url = @promo.image.url
     brand = @promo.brand
+    @promo.stores = brand.stores
     respond_to do |format|
       if @promo.save
-        assign_stores(@promo.id)
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render json: @promo, status: :created, location: @promo }
       else
@@ -68,9 +60,10 @@
   def update
     @promo = Promo.find(params[:id])
     @promo.image_url = @promo.image.url
+    brand = Brand.find(params[:promo][:brand_id])
+    @promo.stores = brand.stores
     respond_to do |format|
       if @promo.update_attributes(params[:promo])
-        assign_stores(@promo.id)
         format.html { redirect_to @promo, notice: 'Promo was successfully updated.' }
         format.json { head :no_content }
       else

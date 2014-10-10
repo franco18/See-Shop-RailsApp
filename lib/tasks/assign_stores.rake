@@ -8,9 +8,8 @@ namespace :db  do
     promos = Promo.all
     promos.each do |promo|
       brand = promo.brand
-      brand.stores.each do |store|
-        promo.stores << store
-      end
+      promo.stores = brand.stores
+      promo.save
     end
   end
 end

@@ -11,7 +11,7 @@
         <span class= "glyphicon glyphicon-info-sign"></span>
     <% end %>
     <%= link_to(edit_promo_path(promo), :class =>
-        'btn btn-default btn-xs', :title => "Editar", disabled: true) do %>
+        'btn btn-default btn-xs', :title => "Editar", disabled: false) do %>
         <span class="glyphicon glyphicon-pencil"></span>
     <% end %>
     <%= link_to(promo, method: :delete, data: { confirm:

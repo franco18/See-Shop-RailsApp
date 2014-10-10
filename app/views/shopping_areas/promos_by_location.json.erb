@@ -1,0 +1,14 @@
+<% json =  []%>
+  <% @promos.each do |promo| %>
+    {
+    promo: <%= promo.to_json.html_safe %>
+    brand_name: <%= promo.brand.name %>
+    stores:
+    <% promo.stores.each do |store| %>
+      {
+        name_store: <%= store.name %>
+      },
+    <% end %>
+    }
+  <% end %>
+ <% = json.to_json %>

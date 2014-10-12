@@ -24,6 +24,12 @@ class Store < ActiveRecord::Base
   has_many :store_promos
   has_many :promos, through: :store_promos
 
+  validates :name, :email, :address, :latitude, :longitude, presence: true
+
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :email, format: { with: email_regex }
+
   def self.search(search)
     if search
       where('name LIKE upper(?) or phone LIKE (?) or address like (?)',

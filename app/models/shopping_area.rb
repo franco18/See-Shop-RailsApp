@@ -18,45 +18,50 @@ class ShoppingArea < ActiveRecord::Base
 
   has_many :stores, dependent: :destroy
 
+  validates :name, :latitude, :longitude, :city, :address, presence: true
+
   def self.shopping_areas_in_range(user_location)
     # user_location = [latitud,longitud]
     shopping_areas = self.all
     shopping_areas_selected = [] unless shopping_areas_selected
     distances = [] unless distances
-    eafit = [ 6.28305, -75.5564]#[6.200883, -75.578324]
+    Rails.logger.info "user_location = #{user_location}"
+    # eafit = [6.201172, -75.578366]
+    #Rails.logger.info "Acabe de asignar eafit = [ 6.28305, -75.5564]"
     shopping_areas.each do |shopping_area|
       shopping_area_location = [shopping_area.latitude, shopping_area.longitude]
-      distance = distance_between(eafit.clone, shopping_area_location)
+      Rails.logger.info "#{shopping_area.name}"
+      distance = distance_between(user_location.clone, shopping_area_location)
+      Rails.logger.info "#Distance to #{shopping_area.name} is #{distance}"
       distances << distance
       shopping_areas_selected << shopping_area if distance < 2000
+      Rails.logger.info "shopping_areas_selected: #{shopping_areas_selected}"
     end
     #Shopping areas in the range
     promos = promos_in_range(shopping_areas_selected)
+    Rails.logger.info "Promos: #{promos}"
     return promos
   end
 
   def self.promos_in_range(shopping_areas)
     promos = [] unless promos
+    stores = [] unless stores
+    shopping_areas_array = []
     shopping_areas.each do |sa|
-      promos = stores_with_promos(sa)
-    end
-    promos
-  end
-
-  def self.stores_with_promos (shopping_area)
-    promos = [] unless promos
-    shopping_area.stores.each do |store|
-      puts "***************Stores******************"
-      puts "#{store.name}"
-      puts "***************************************"
-      store.promos.each do |promo|
-        puts "*********************Promos de #{store.name}********************"
-        puts "#{promo.name}"
-        puts "***********************************************"
-        promos << promo
+      sa.stores.each do |store|
+        store.promos.each do |promo|
+          promo[:brand_name] = promo.brand.name
+          promo[:image_encode] = Base64.encode64(File.open(promo.image.path).read)
+          promos << promo unless promos.include? promo
+        end
+        store[:promos] = promos
+        stores << store unless stores.include? store
       end
+      sa[:stores] = stores
+      shopping_areas_array << sa unless shopping_areas_array.include? sa
+      # promos = stores_with_promos(sa)
     end
-    promos
+    shopping_areas_array
   end
 
   def self.distance_between a, b

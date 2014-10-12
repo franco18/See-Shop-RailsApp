@@ -10,7 +10,7 @@ SeeAndShop::Application.routes.draw do
 
   resources :brands
 
-  match '/promos_by_location', to: 'shopping_areas#promos_by_location'
+  match '/promos_by_location', to: 'shopping_areas#promos_by_location', via: :post
 
 
   # The priority is based upon order of creation:

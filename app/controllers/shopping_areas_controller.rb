@@ -3,13 +3,14 @@ class ShoppingAreasController < ApplicationController
 
   def promos_by_location
     user_location = [params[:latitude],params[:longitude]]
+    Rails.logger.info "user_location = #{user_location.inspect}"
     @promos = ShoppingArea.shopping_areas_in_range(user_location)
     respond_to do |format|
-      format.json { render file: "shopping_areas/promos_by_location.json.erb",
-        content_type: 'application/json'}
+      format.json { render json: @promos}
     end
 
   end
+
   # GET /shopping_areas
   # GET /shopping_areas.json
   def index

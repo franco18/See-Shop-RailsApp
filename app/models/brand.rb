@@ -26,12 +26,18 @@ class Brand < ActiveRecord::Base
     :default_url => "no_picture.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
+  validates :name, :nit, :email, presence: true
   validates :avatar, :attachment_presence => true
+
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :email, format: { with: email_regex }
 
   def self.search(search)
     if search
       where('name LIKE upper(?) or email LIKE (?) or description LIKE (?) or
-        web_page LIKE (?) or nit LIKE (?) or phone LIKE (?)', "%#{search}%")
+        web_page LIKE (?) or nit LIKE (?) or phone LIKE (?)', "%#{search}%",
+        "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
     else
       where("1=1")
     end

@@ -5,7 +5,7 @@ class BrandsController < ApplicationController
   def index
     @brands = Brand.search(params[:search])
     @brands.each do |brand|
-      brand["image_encode"] = Base64.encode64(File.open(brand.avatar.path).read)
+      brand[:image_encode] = Base64.encode64(File.open(brand.avatar.path).read)
     end
     respond_with(@brands)
   end
@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
   # GET /brands/1.json
   def show
     @brand = Brand.find(params[:id])
-    @brand["image_encode"] = Base64.encode64(File.open(@brand.avatar.path).read)
+    @brand[:image_encode] = Base64.encode64(File.open(@brand.avatar.path).read)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @brand }

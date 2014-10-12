@@ -1,12 +1,12 @@
- class PromosController < ApplicationController
+class PromosController < ApplicationController
   respond_to :json, :html, :js
   # GET /promos
   # GET /promos.json
   def index
     @promos = Promo.search(params[:search])
     @promos.each do |promo|
-      promo["brand_name"] = promo.brand.name
-      promo["image_encode"] = Base64.encode64(File.open(promo.image.path).read)
+      promo[:brand_name] = promo.brand.name
+      promo[:image_encode] = Base64.encode64(File.open(promo.image.path).read)
     end
     respond_with(@promos)
   end
@@ -15,7 +15,7 @@
   # GET /promos/1.json
   def show
     @promo = Promo.find(params[:id])
-    @promo["image_encode"] = Base64.encode64(File.open(@promo.image.path).read)
+    @promo[:image_encode] = Base64.encode64(File.open(@promo.image.path).read)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @promo }

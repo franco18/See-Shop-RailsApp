@@ -1,6 +1,25 @@
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:17:58 +0000
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:10:04 +0000
+Processing by PromosController#index as JSON
+  Parameters: {"promo"=>{}}
+  [1m[36mPromo Load (0.2ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+Completed 200 OK in 89ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:10:48 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
   [1m[35mPromo Load (0.3ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
@@ -16,162 +35,48 @@ DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writin
   [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 104ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 108ms (Views: 76.6ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:19:47 +0000
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:10:52 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.4ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
+  [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 102ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 59ms (Views: 27.8ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:13 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.5ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 105ms (Views: 71.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:18 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.4ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 106ms (Views: 74.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:21 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.6ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 104ms (Views: 71.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:26 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.6ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 61ms (Views: 28.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:39 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.5ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 59ms (Views: 27.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:56 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.4ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.6ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 101ms (Views: 27.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:20:59 +0000
+Started GET "/promos.json" for 201.232.178.175 at 2014-10-13 00:10:55 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
   [1m[35mPromo Load (0.4ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 110ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 113ms (Views: 26.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:21:04 +0000
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:11:06 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
   [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
@@ -190,125 +95,11 @@ DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writin
 Completed 200 OK in 103ms (Views: 71.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:21:16 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.5ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 108ms (Views: 74.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 201.232.178.175 at 2014-10-12 23:24:56 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.5ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 112ms (Views: 78.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 201.232.178.175 at 2014-10-12 23:24:59 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.4ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.6ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 65ms (Views: 30.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:25:36 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.5ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.6ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 65ms (Views: 30.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:25:43 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.6ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.7ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.6ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 107ms (Views: 26.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:25:50 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.1ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.1ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.1ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.1ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.1ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 61ms (Views: 44.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 201.232.178.175 at 2014-10-12 23:26:34 +0000
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:11:21 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
   [1m[35mPromo Load (0.3ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
   [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
@@ -320,13 +111,89 @@ DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writin
   [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 112ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 105ms (Views: 74.4ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:28:12 +0000
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:12:48 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.2ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
+  [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+Completed 200 OK in 58ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promos.json" for 201.232.178.175 at 2014-10-13 00:13:28 +0000
+Processing by PromosController#index as JSON
+  Parameters: {"promo"=>{}}
+  [1m[35mPromo Load (0.2ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+Completed 200 OK in 89ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:13:32 +0000
+Processing by PromosController#index as JSON
+  Parameters: {"promo"=>{}}
+  [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+Completed 200 OK in 107ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:13:37 +0000
+Processing by PromosController#index as JSON
+  Parameters: {"promo"=>{}}
+  [1m[35mPromo Load (0.4ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+Completed 200 OK in 116ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:13:44 +0000
+Processing by PromosController#index as JSON
+  Parameters: {"promo"=>{}}
+  [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
   [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
@@ -339,51 +206,13 @@ DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writin
   [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 89ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 59ms (Views: 27.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:29:33 +0000
+Started GET "/promos.json" for 190.146.21.89 at 2014-10-13 00:15:22 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.4ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 107ms (Views: 75.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:30:36 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.5ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 61ms (Views: 27.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:32:31 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.5ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
+  [1m[35mPromo Load (0.6ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
   [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
@@ -396,86 +225,10 @@ DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writin
   [1m[35mBrand Load (0.6ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 108ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 56ms (Views: 23.1ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:32:43 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.5ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.6ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 106ms (Views: 26.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:32:46 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.5ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.5ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 109ms (Views: 76.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:33:08 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 111ms (Views: 78.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:33:26 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.3ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 59ms (Views: 28.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 201.232.178.175 at 2014-10-12 23:33:59 +0000
+Started GET "/promos.json" for 201.232.178.175 at 2014-10-13 00:15:36 +0000
 Processing by PromosController#index as JSON
   Parameters: {"promo"=>{}}
   [1m[36mPromo Load (0.2ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
@@ -488,45 +241,55 @@ DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writin
   [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
 DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
 DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 48ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 104ms (Views: 26.0ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:34:16 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[35mPromo Load (0.2ms)[0m  SELECT `promos`.* FROM `promos` WHERE (1=1)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 100ms (Views: 24.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/promos.json" for 200.12.181.28 at 2014-10-12 23:34:30 +0000
-Processing by PromosController#index as JSON
-  Parameters: {"promo"=>{}}
-  [1m[36mPromo Load (0.3ms)[0m  [1mSELECT `promos`.* FROM `promos` WHERE (1=1)[0m
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
+Started POST "/promos_by_location" for 190.146.21.89 at 2014-10-13 00:15:46 +0000
+Processing by ShoppingAreasController#promos_by_location as JSON
+  Parameters: {"longitude"=>-75.58116198, "latitude"=>6.18520136, "shopping_area"=>{"latitude"=>6.18520136, "longitude"=>-75.58116198}}
+WARNING: Can't verify CSRF token authenticity
+user_location = [6.18520136, -75.58116198]
+  [1m[35mShoppingArea Load (0.2ms)[0m  SELECT `shopping_areas`.* FROM `shopping_areas` 
+user_location = [6.18520136, -75.58116198]
+El Tesoro
+#Distance to El Tesoro is 2803.060124972764
+shopping_areas_selected: []
+C.C. Santafe
+#Distance to C.C. Santafe is 1511.4480195571896
+shopping_areas_selected: [#<ShoppingArea id: 2, name: "C.C. Santafe", latitude: 6.1969, longitude: -75.5742, created_at: "2014-10-07 18:40:27", updated_at: "2014-10-07 20:26:27", description: "Santafe del poblado", city: "Medellin", address: "Cra, 43A No. 7 Sur-170. Avenida el Poblado ">]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`shopping_area_id` = 2[0m
+  [1m[35mPromo Load (0.2ms)[0m  SELECT `promos`.* FROM `promos` INNER JOIN `store_promos` ON `promos`.`id` = `store_promos`.`promo_id` WHERE `store_promos`.`store_id` = 2
   [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[35mBrand Load (0.2ms)[0m  SELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
-DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:8)
-DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in index at /var/www/html/apps/proyecto_integrador/app/controllers/promos_controller.rb:9)
-Completed 200 OK in 101ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block (3 levels) in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:53)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block (3 levels) in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:54)
+DEPRECATION WARNING: You're trying to create an attribute `promos'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block (2 levels) in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:57)
+DEPRECATION WARNING: You're trying to create an attribute `stores'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:60)
+Promos: [#<ShoppingArea id: 2, name: "C.C. Santafe", latitude: 6.1969, longitude: -75.5742, created_at: "2014-10-07 18:40:27", updated_at: "2014-10-07 20:26:27", description: "Santafe del poblado", city: "Medellin", address: "Cra, 43A No. 7 Sur-170. Avenida el Poblado ">]
+Completed 200 OK in 24ms (Views: 9.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/promos_by_location" for 190.146.21.89 at 2014-10-13 00:16:05 +0000
+Processing by ShoppingAreasController#promos_by_location as JSON
+  Parameters: {"longitude"=>-75.5811531, "latitude"=>6.18505983, "shopping_area"=>{"latitude"=>6.18505983, "longitude"=>-75.5811531}}
+WARNING: Can't verify CSRF token authenticity
+user_location = [6.18505983, -75.5811531]
+  [1m[35mShoppingArea Load (0.3ms)[0m  SELECT `shopping_areas`.* FROM `shopping_areas` 
+user_location = [6.18505983, -75.5811531]
+El Tesoro
+#Distance to El Tesoro is 2809.885168105269
+shopping_areas_selected: []
+C.C. Santafe
+#Distance to C.C. Santafe is 1524.518381119545
+shopping_areas_selected: [#<ShoppingArea id: 2, name: "C.C. Santafe", latitude: 6.1969, longitude: -75.5742, created_at: "2014-10-07 18:40:27", updated_at: "2014-10-07 20:26:27", description: "Santafe del poblado", city: "Medellin", address: "Cra, 43A No. 7 Sur-170. Avenida el Poblado ">]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`shopping_area_id` = 2[0m
+  [1m[35mPromo Load (0.2ms)[0m  SELECT `promos`.* FROM `promos` INNER JOIN `store_promos` ON `promos`.`id` = `store_promos`.`promo_id` WHERE `store_promos`.`store_id` = 2
+  [1m[36mBrand Load (0.2ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `brand_name'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block (3 levels) in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:53)
+DEPRECATION WARNING: You're trying to create an attribute `image_encode'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block (3 levels) in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:54)
+DEPRECATION WARNING: You're trying to create an attribute `promos'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block (2 levels) in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:57)
+DEPRECATION WARNING: You're trying to create an attribute `stores'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from block in promos_in_range at /var/www/html/apps/proyecto_integrador/app/models/shopping_area.rb:60)
+Promos: [#<ShoppingArea id: 2, name: "C.C. Santafe", latitude: 6.1969, longitude: -75.5742, created_at: "2014-10-07 18:40:27", updated_at: "2014-10-07 20:26:27", description: "Santafe del poblado", city: "Medellin", address: "Cra, 43A No. 7 Sur-170. Avenida el Poblado ">]
+Completed 200 OK in 74ms (Views: 55.5ms | ActiveRecord: 0.9ms)

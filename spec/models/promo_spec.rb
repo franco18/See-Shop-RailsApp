@@ -28,6 +28,7 @@ RSpec.describe Promo, :type => :model do
       description: "This is the promo description",
       start_date: Date.today,
       end_date: Date.tomorrow,
+      brand_id: 1,
       restriction: "This is the promo restriction",
       image: File.new("app//assets/images/no_picture.png")
     }
@@ -52,11 +53,30 @@ RSpec.describe Promo, :type => :model do
     no_start_date_promo.should_not be_valid
   end
 
+  it "should require an end_date" do
+    no_end_date_promo = Promo.new(@attr.merge(end_date: nil))
+    no_end_date_promo.should_not be_valid
+  end
+
+  it "should require a restriction" do
+    no_restriction_promo = Promo.new(@attr.merge(restriction: ""))
+    no_restriction_promo.should_not be_valid
+  end
+
+  it "should require an image" do
+    no_image_promo = Promo.new(@attr.merge(image: ""))
+    no_image_promo.should_not be_valid
+  end
+
+  it "should require a brand_id" do
+    no_brand_id_promo = Promo.new(@attr.merge(brand_id: nil))
+    no_brand_id_promo.should_not be_valid
+  end
+
   it "should search a promo" do
     Promo.create!(@attr)
     brand_searched = Promo.search("exam")
     brand_searched.should_not be_nil
   end
 
-  it "should delete its promos on delete"
 end

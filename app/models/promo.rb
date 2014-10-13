@@ -31,10 +31,13 @@ class Promo < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   validates :image, :attachment_presence => true
+  validates :name, :description, :start_date, :end_date, :restriction, :brand_id,
+    presence: true
 
   def self.search(search)
     if search
-      where('name LIKE (?) or restriction LIKE (?)', "%#{search}%", "%#{search}%")
+      where('name LIKE (?) or restriction LIKE (?) or description LIKE (?)',
+        "%#{search}%", "%#{search}%", "%#{search}%")
     else
       where("1=1")
     end

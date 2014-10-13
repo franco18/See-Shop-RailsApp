@@ -22,6 +22,12 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :promo do
+  factory :promo do |promo|
+    promo.name        "Example Promo FactoryGirl"
+    promo.description "This is the promo description"
+    promo.start_date  Date.today
+    promo.end_date    Date.tomorrow
+    promo.restriction "This is the promo restriction"
+    promo.image       File.new("app//assets/images/no_picture.png")
   end
 end

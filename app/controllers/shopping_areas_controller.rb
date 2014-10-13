@@ -2,11 +2,11 @@ class ShoppingAreasController < ApplicationController
   respond_to :json, :html, :js
 
   def promos_by_location
-    user_location = [params[:latitude],params[:longitude]]
+    user_location = [params[:latitude].to_f,params[:longitude].to_f]
     Rails.logger.info "user_location = #{user_location.inspect}"
     @promos = ShoppingArea.shopping_areas_in_range(user_location)
     respond_to do |format|
-      format.json { render json: @promos}
+      format.json { render json: @promos.to_json}
     end
 
   end

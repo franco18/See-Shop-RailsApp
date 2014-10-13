@@ -72,7 +72,24 @@ RSpec.describe Brand, :type => :model do
     brand_searched.should_not be_nil
   end
 
-  it "should delete its stores on delete"
+  describe "store associations" do
+    before(:each) do
+      @brand = Brand.create(@attr)
+      @store1 = create(:store, brand: @brand)
+      @store2 = create(:store, brand: @brand)
+    end
 
-  it "should delete its promos on delete"
+    it "should have a stores attribute" do
+      @brand.should respond_to(:stores)
+    end
+    it "should have the right stores in the right order" do
+      @brand.stores.should == [@store1, @store2]
+    end
+    it "should destroy associated stores" do
+      @brand.destroy
+      [@store1, @store2].each do |store|
+        Store.find_by_id(store.id).should be_nil
+      end
+    end
+  end
 end

@@ -18,6 +18,13 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :store do
+  factory :store do |store|
+    store.name      "Example Store FactoryGirl"
+    store.email     "store2@example2.com"
+    store.phone     "30982741"
+    store.latitude  6.201161
+    store.longitude -75.578441
+    store.address   "Example Street 2"
+    store.association :brand
   end
 end

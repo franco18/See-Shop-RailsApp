@@ -62,4 +62,5 @@ RSpec.describe ShoppingArea, :type => :model do
   end
 
   it "should delete its stores when delete"
+
 end

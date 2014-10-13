@@ -20,7 +20,7 @@
 
 class Brand < ActiveRecord::Base
   attr_accessible :description, :email, :name, :web_page, :nit, :phone, :avatar
-  has_many :stores
+  has_many :stores, :dependent => :destroy
   has_many :promos
   has_attached_file :avatar, url: "/assets/images/brands/:id/:basename.:extension",
     :default_url => "no_picture.png"

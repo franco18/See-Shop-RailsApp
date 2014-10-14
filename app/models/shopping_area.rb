@@ -51,7 +51,7 @@ class ShoppingArea < ActiveRecord::Base
       sa.stores.each do |store|
         store.promos.each do |promo|
           promo[:brand_name] = promo.brand.name
-          promo[:image_encode] = Base64.encode64(File.open(promo.image.path).read)
+          # promo[:image_encode] = Base64.encode64(File.open(promo.image.path).read)
           promos << promo unless promos.include? promo
         end
         store[:promos] = promos

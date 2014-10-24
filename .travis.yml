@@ -7,4 +7,4 @@ script:
 
 before_script:
   - mysql -e "create database see_and_shop_test"
-  - bundle exec rake db:prepare:test
+  - bundle exec rake --trace db:migrate

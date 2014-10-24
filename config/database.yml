@@ -27,8 +27,8 @@ test:
   reconnect: false
   database: see_and_shop_test
   pool: 5
-  username: root
-  password: dtroot@
+  username: travis
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 production:

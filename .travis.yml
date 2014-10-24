@@ -2,6 +2,7 @@ language: ruby
 rvm:
   - "2.1.0"
 before_script:
+  - mysql -e "create see_and_shop_test IF NOT EXISTS test;" -uroot
   - rake --trace db:create test
   - rake --trace db:migrate test
 # uncomment this line if your project needs to run something other than `rake`:

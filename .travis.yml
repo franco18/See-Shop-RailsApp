@@ -1,5 +1,8 @@
 language: ruby
 rvm:
   - "2.1.0"
+before_script:
+  - rake --trace db:create test
+  - rake --trace db:migrate test
 # uncomment this line if your project needs to run something other than `rake`:
 script: bundle exec rspec spec

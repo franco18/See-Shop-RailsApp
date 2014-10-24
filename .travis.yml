@@ -6,4 +6,4 @@ script: bundle exec rspec spec
 
 before_script:
   - mysql -e "create database see_and_shop_test"
-  - rake --trace db:migrate test
+  - bundle exec rake --trace db:migrate test

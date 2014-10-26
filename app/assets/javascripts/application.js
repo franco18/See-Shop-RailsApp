@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
-//= require bootstrap-sprockets
 //= require bootstrap-select.js
 
 $(document).ready(function() {

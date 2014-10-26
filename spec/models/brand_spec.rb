@@ -45,7 +45,7 @@ RSpec.describe Brand, :type => :model do
 
   it "should require an email" do
     no_email_brand = Brand.new(@attr.merge(email: ""))
-    no_email_brand.should be_valid
+    no_email_brand.should_not be_valid
   end
 
   it "should reject invalid email addresses" do

@@ -8,3 +8,9 @@ script:
 before_script:
   - mysql -e "create database see_and_shop_test"
   - bundle exec rake --trace db:migrate
+
+deploy:
+  provider: heroku
+  api_key: "11bd4baa-fb3f-4aa1-a07a-eb3854be5d56"
+  app: seeandshop
+  run: "rake db:migrate"

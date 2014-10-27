@@ -34,6 +34,7 @@ gem 'jquery-ui-rails'
 #To annotate database models
 gem 'annotate'
 #To use bootstrap
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'simple_form'

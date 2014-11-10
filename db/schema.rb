@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141009204520) do
+ActiveRecord::Schema.define(:version => 20141107162527) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,28 @@ ActiveRecord::Schema.define(:version => 20141009204520) do
     t.datetime "avatar_updated_at"
     t.string   "image_url"
   end
+
+  create_table "gcm_devices", :force => true do |t|
+    t.string   "registration_id",    :null => false
+    t.datetime "last_registered_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "gcm_devices", ["registration_id"], :name => "index_gcm_devices_on_registration_id", :unique => true
+
+  create_table "gcm_notifications", :force => true do |t|
+    t.integer  "device_id",        :null => false
+    t.string   "collapse_key"
+    t.text     "data"
+    t.boolean  "delay_while_idle"
+    t.datetime "sent_at"
+    t.integer  "time_to_live"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "gcm_notifications", ["device_id"], :name => "index_gcm_notifications_on_device_id"
 
   create_table "locations", :force => true do |t|
     t.string   "location"
@@ -82,6 +104,17 @@ ActiveRecord::Schema.define(:version => 20141009204520) do
     t.integer  "shopping_area_id"
     t.float    "longitude"
     t.float    "latitude"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "notifications_code"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "facebook_id"
+    t.string   "email"
+    t.date     "birthday"
+    t.string   "gender"
   end
 
 end

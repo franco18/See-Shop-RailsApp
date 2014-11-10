@@ -4,11 +4,10 @@ class ShoppingAreasController < ApplicationController
   def promos_by_location
     user_location = [params[:latitude].to_f,params[:longitude].to_f]
     Rails.logger.info "user_location = #{user_location.inspect}"
-    @promos = ShoppingArea.shopping_areas_in_range(user_location)
+    @close_promos = ShoppingArea.shopping_areas_in_range(user_location)
     respond_to do |format|
-      format.json { render json: @promos.to_json}
+      format.json { render json: @close_promos.to_json}
     end
-
   end
 
   # GET /shopping_areas
@@ -22,7 +21,6 @@ class ShoppingAreasController < ApplicationController
   # GET /shopping_areas/1.json
   def show
     @shopping_area = ShoppingArea.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @shopping_area }

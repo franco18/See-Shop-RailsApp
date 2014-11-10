@@ -1,12 +1,34 @@
 class PromosController < ApplicationController
   respond_to :json, :html, :js
+
+  def facebook_token
+    token = params[:token]
+    user_id = params[:user_id]
+    user = FbGraph::User.fetch(user_id, :access_token => token)
+    likes = user.likes
+    Rails.logger.info "********LIKES*************"
+    # if likes.include? :next
+    #   puts "YES!!!!!!!!!"
+    # end
+    likes.each do |like|
+      Rails.logger.info "#{like.inspect}"
+      Rails.logger.info "#{like.category}"
+      Rails.logger.info "#{like.name}"
+    end
+    @user = user.name
+    UsersController.send_push_notification("aa")
+    respond_to do |format|
+      format.json { render json: @user}
+    end
+  end
+
   # GET /promos
   # GET /promos.json
   def index
     @promos = Promo.search(params[:search])
     @promos.each do |promo|
       promo[:brand_name] = promo.brand.name
-      promo[:image_encode] = Base64.encode64(File.open(promo.image.path).read)
+      promo.image_url = promo.image
     end
     respond_with(@promos)
   end
@@ -15,7 +37,7 @@ class PromosController < ApplicationController
   # GET /promos/1.json
   def show
     @promo = Promo.find(params[:id])
-    @promo[:image_encode] = Base64.encode64(File.open(@promo.image.path).read)
+    @promo.image_url = @promo.image
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @promo }
@@ -41,7 +63,6 @@ class PromosController < ApplicationController
   # POST /promos.json
   def create
     @promo = Promo.new(params[:promo])
-    @promo.image_url = @promo.image.url
     brand = @promo.brand
     @promo.stores = brand.stores
     respond_to do |format|
@@ -59,7 +80,6 @@ class PromosController < ApplicationController
   # PUT /promos/1.json
   def update
     @promo = Promo.find(params[:id])
-    @promo.image_url = @promo.image.url
     brand = Brand.find(params[:promo][:brand_id])
     @promo.stores = brand.stores
     respond_to do |format|

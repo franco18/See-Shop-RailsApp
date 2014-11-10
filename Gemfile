@@ -41,6 +41,10 @@ gem 'devise'
 #To attach files
 gem "paperclip", "~> 4.2"
 
+gem 'fb_graph'
+#To use Google Cloud Messaging
+gem 'gcm_on_rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

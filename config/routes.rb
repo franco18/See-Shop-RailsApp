@@ -1,4 +1,12 @@
 SeeAndShop::Application.routes.draw do
+  get "users/new"
+
+  get "users/edit"
+
+  get "users/show"
+
+  get "users/index"
+
   resources :shopping_areas
 
 
@@ -7,10 +15,11 @@ SeeAndShop::Application.routes.draw do
 
   resources :stores
 
-
   resources :brands
 
   match '/promos_by_location', to: 'shopping_areas#promos_by_location', via: :post
+  match '/facebook_token', to: 'users#create_from_facebook', via: :post
+  match '/register_client', to: 'users#register_client', via: :post
 
 
   # The priority is based upon order of creation:
